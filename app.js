@@ -8,6 +8,7 @@
 
 	function LunchCheckController($scope) {
 		$scope.message = "";
+		$scope.color = "red";
 
 
 		$scope.eatLunch = function () {
@@ -26,13 +27,17 @@
 				console.log(numItems);
 				if (numItems > 3) {
 					$scope.message = "Too much!";
+					$scope.color = "green";
 				} else if (numItems > 0) {
 					$scope.message = "Enjoy!";
+					$scope.color = "green";
 				} else {
 					$scope.message = "Please enter data first";
+					$scope.color = "red";
 				}
 			} else {
 				$scope.message = "Please enter data first";
+				$scope.color = "red";
 			}
 
 		};
